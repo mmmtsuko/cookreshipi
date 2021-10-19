@@ -1,0 +1,61 @@
+<main class="main">
+  <div class="inner">
+    <div class="dish__wrapper">
+      <p class="dish__hedding">
+        <%= @dish.title%>
+      </p>
+      <%= link_to "by #{@dish.user.name} ", user_path(@dish.user), class: :dish__user %>
+   
+        <div class="dish__manage">
+          <%= link_to "編集する", edit_dish_path(@dish), class: :dish__btn %>
+          <%= link_to "削除する", dish_path(@dish), method: :delete, class: :dish__btn %>
+        </div>
+      <% end %>
+
+      <div class="dish__image">
+      <%= image_tag @dish.image %>
+      </div>
+      <div class="dish__body">
+        <div class="dish__detail">
+          <p class="detail__title">対象アレルギー</p>
+          <p class="detail__message">
+            <%= @dish.arerugi %>
+          </p>
+        </div>
+        <div class="desh__detail">
+          <p class="detail__title">材料</p>
+          <p class="detail__message">
+            <%= @dish.material %>
+          </p>
+        </div>
+        <div class="desh__detail">
+          <p class="detail__title">作り方</p>
+          <p class="detail__message">
+            <%= @dish.procedure %>
+          </p>
+        </div>
+      </div>
+      <div class="dish__comments">
+      <% if user_signed_in? %>
+        <%= form_with model: [@dish],local: true do |f|%>
+            <div class="field">
+              <%# <%= f.label :hoge, "コメント" %><br />
+              <%# <%= f.text_field :hoge, id:"comment_content" %>
+            </div>
+            <div class="actions">
+              <%# <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <%# <% end %>
+        <%# // ログインしているユーザーには上記を表示する %>
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+            <li class="comments_list">
+              <%# <%= " コメントのテキスト "%>
+              <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
+            </li>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
