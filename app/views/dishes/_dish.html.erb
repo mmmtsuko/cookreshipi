@@ -3,8 +3,8 @@
   <div class="card__body">
     <%= link_to dish.title, root_path, class: :card__title%>
     <p class="card__summary">
-      <%= dish.arerugi %>
+      <%= dish.category %>
     </p>
-    <%= link_to "by #{dish.user.nickname}", root_path, class: :card__user %>
+    <%= link_to "投稿者 #{dish.user.nickname}", root_path, class: :card__user %>
   </div>
 </div>

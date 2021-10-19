@@ -5,8 +5,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :arerugi, "対象アレルギー" %><br />
-    <%= f.text_area :arerugi, class: :form__text, id:"dish_arerugi" %>
+    <%= f.label :category, "カテゴリー" %><br />
+    <%= f.text_area :category, class: :form__text, id:"dish_category" %>
   </div>
 
   <div class="field">
@@ -15,9 +15,20 @@
   </div>
 
   <div class="field">
-    <%= f.label :procedure, "作り方" %><br />
-    <%= f.text_area :procedure, class: :form__text, id:"dish_procedure" %>
+    <%= f.label :one, "作り方.1" %><br />
+    <%= f.text_area :one, class: :form__text, id:"dish_one" %>
   </div>
+
+   <div class="field">
+    <%= f.label :two, "作り方.2" %><br />
+    <%= f.text_area :two, class: :form__text, id:"dish_two" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :three, "作り方.3" %><br />
+    <%= f.text_area :three, class: :form__text, id:"dish_three" %>
+  </div>
+
 
   <div class="field">
     <%= f.label :image, "画像" %><br />

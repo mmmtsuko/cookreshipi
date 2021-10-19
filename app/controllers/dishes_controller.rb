@@ -1,5 +1,5 @@
 class DishesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :create]
 
   def index
     @dishes = Dish.all
@@ -21,13 +21,12 @@ class DishesController < ApplicationController
 
   def show
     @dish = Dish.find(params[:id])
+    @comment = Comment.new
+    @comments = @dish.comments.includes(:user)
   end
 
   def edit
     @dish = Dish.find(params[:id])
-    unless @dish.user.id == current_user.id
-      redirect_to action: :index
-    end
   end
 
 
@@ -45,6 +44,6 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:title, :arerugi, :material, :procedure,:image, :user).merge(user_id: current_user.id)
+    params.require(:dish).permit(:title, :category, :material, :one, :two, :three, :image, :user).merge(user_id: current_user.id)
   end
 end
