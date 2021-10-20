@@ -20,7 +20,7 @@
 
 
 #  URL 	
-https://furima-36545.herokuapp.com/
+https://cookreshipi.herokuapp.com/
 
 
 # テスト用アカウント	
@@ -35,7 +35,8 @@ https://furima-36545.herokuapp.com/
 
 # 利用方法	
 ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。
- https://i.gyazo.com/4b80f32274fb8e170bdeb0a4727538f7.png
+https://i.gyazo.com/4b80f32274fb8e170bdeb0a4727538f7.png
+
  ユーザー登録を行わなくても、レシピを閲覧することができます。
 
 ユーザーページで自分が投稿した内容を確認することができます。
