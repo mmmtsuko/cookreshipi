@@ -35,12 +35,12 @@ https://cookreshipi.herokuapp.com/
 
 # 利用方法	
 ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。
- <img src="public/images/dish_new">
+ 
 
  ユーザー登録を行わなくても、レシピを閲覧することができます。
 
 ユーザーページで自分が投稿した内容を確認することができます。
- <img src="public/images/dish_index">
+ 
 
 
 
@@ -56,4 +56,39 @@ https://cookreshipi.herokuapp.com/
 Ruby on rails  6.0
 MySQL
 
-#データベース設計
+# データベース設計
+
+## users テーブル
+|Column             |Type     | Options   |
+|-------------------|---------|-----------|
+|email              |string   |null:false |
+|encrypted_password |string   |null:false |
+|nickname           |string   |null:false |
+|profile            |text     |null:false |
+
+Association
+.dish
+.comment
+
+## dish テーブル
+|column   |Type       |Options    |
+|---------|-----------|-----------|
+|title    |text       |null:false |
+|category |text       |null:false |
+|material |text       |null:false |
+|one      |text       |null:false |
+|two      |text       |null:false |
+|three    |text       |null:false |
+|user     |references |null:false |
+
+Association
+.users
+.comment
+
+## commentテーブル
+|column   |Type       |Optiond    |
+|---------|-----------|-----------|
+|content  |text       |null:false |
+|dish     |references |null:false |
+|user     |references |null:false |
+
