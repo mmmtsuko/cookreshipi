@@ -183,7 +183,8 @@ a {
 }
 .dish__detail{
   display: flex;
-  align-items: center;
+  justify-content: center;
+
   flex-direction: column;
   margin-bottom: 8px;
 }

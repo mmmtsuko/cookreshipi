@@ -4,14 +4,7 @@
       <p class="dish__hedding">
         <%= @dish.title %>
       </p>
-      <%= link_to "投稿者 #{@dish.user.nickname}", user_path(@dish.user), class: :dish__user %>
-       <% if current_user == @dish.user %>
-        <div class="dish__manage">
-          <%= link_to "編集する", edit_dish_path(@dish), class: :dish__btn %>
-          <%= link_to "削除する", dish_path(@dish), method: :delete, class: :dish__btn %>
-        </div>
-      <% end %>
-
+     
       <div class="dish__image">
       <%= image_tag @dish.image %>
       </div>
@@ -37,6 +30,15 @@
           </p>
         </div>
       </div>
+
+       <%= link_to "投稿者 #{@dish.user.nickname}", user_path(@dish.user), class: :dish__user %>
+       <% if current_user == @dish.user %>
+        <div class="dish__manage">
+          <%= link_to "編集する", edit_dish_path(@dish), class: :dish__btn %>
+          <%= link_to "削除する", dish_path(@dish), method: :delete, class: :dish__btn %>
+        </div>
+      <% end %>
+
       <div class="dish__comments">
       <% if user_signed_in? %>
         <%= form_with model: [@dish],local: true do |f|%>
