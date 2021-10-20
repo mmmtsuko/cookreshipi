@@ -35,12 +35,12 @@ https://cookreshipi.herokuapp.com/
 
 # 利用方法	
 ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。
-https://i.gyazo.com/4b80f32274fb8e170bdeb0a4727538f7.png
+ <img src="public/images/dish_new">
 
  ユーザー登録を行わなくても、レシピを閲覧することができます。
 
 ユーザーページで自分が投稿した内容を確認することができます。
- https://i.gyazo.com/caecd4be87f1cf04f0e134b9a3a7c8a3.jpg
+ <img src="public/images/dish_index">
 
 
 
