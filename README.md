@@ -35,12 +35,10 @@ https://cookreshipi.herokuapp.com/
 
 # 利用方法	
 ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。
- 
-
  ユーザー登録を行わなくても、レシピを閲覧することができます。
-
 ユーザーページで自分が投稿した内容を確認することができます。
- 
+ ![dish_index](https://user-images.githubusercontent.com/88422268/138323704-082d8e3f-d875-4f7a-aebf-7385ce0f9ed8.jpg)
+<img width="692" alt="dish_new" src="https://user-images.githubusercontent.com/88422268/138323725-52c83149-9328-4c16-9433-409f241b5f2b.png">
 
 
 
