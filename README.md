@@ -65,8 +65,8 @@ MySQL
 |profile            |text     |null:false |
 
 Association
-.dish
-.comment
+.has_many  dish 
+.has_many comment
 
 ## dish テーブル
 |column   |Type       |Options    |
@@ -80,8 +80,8 @@ Association
 |user     |references |null:false |
 
 Association
-.users
-.comment
+.belongs_to user
+.has_many  comment
 
 ## commentテーブル
 |column   |Type       |Optiond    |
@@ -89,4 +89,9 @@ Association
 |content  |text       |null:false |
 |dish     |references |null:false |
 |user     |references |null:false |
+
+.belongs_to user
+.has_many comment
+
+
 
