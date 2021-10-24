@@ -20,7 +20,7 @@
 
 
 #  URL 	
-https://furima-36545.herokuapp.com/
+https://cookreshipi.herokuapp.com/
 
 
 # テスト用アカウント	
@@ -35,18 +35,11 @@ https://furima-36545.herokuapp.com/
 
 # 利用方法	
 ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。
-ログインしなくても、レシピの閲覧ができます。
-	
- 
+ ユーザー登録を行わなくても、レシピを閲覧することができます。
+ユーザーページで自分が投稿した内容を確認することができます。
+ ![dish_index](https://user-images.githubusercontent.com/88422268/138323704-082d8e3f-d875-4f7a-aebf-7385ce0f9ed8.jpg)
+<img width="692" alt="dish_new" src="https://user-images.githubusercontent.com/88422268/138323725-52c83149-9328-4c16-9433-409f241b5f2b.png">
 
-# 洗い出した要件	
-スプレッドシートにまとめた要件定義を記述。
-実装した機能についての画像やGIFおよびその説明	実装した機能について、それぞれどのような特徴があるのかを列挙する形で記述。画像はGyazoで、GIFはGyazoGIFで撮影すること。
-
-
-# データベース設計
-	
-ER図等を添付。
 
 
 # 実装予定の機能
@@ -60,3 +53,45 @@ ER図等を添付。
 # 開発環境
 Ruby on rails  6.0
 MySQL
+
+# データベース設計
+
+## users テーブル
+|Column             |Type     | Options   |
+|-------------------|---------|-----------|
+|email              |string   |null:false |
+|encrypted_password |string   |null:false |
+|nickname           |string   |null:false |
+|profile            |text     |null:false |
+
+Association
+.has_many  dish 
+.has_many comment
+
+## dish テーブル
+|column   |Type       |Options    |
+|---------|-----------|-----------|
+|title    |text       |null:false |
+|category |text       |null:false |
+|material |text       |null:false |
+|one      |text       |null:false |
+|two      |text       |null:false |
+|three    |text       |null:false |
+|user     |references |null:false |
+
+Association
+.belongs_to user
+.has_many  comment
+
+## commentテーブル
+|column   |Type       |Optiond    |
+|---------|-----------|-----------|
+|content  |text       |null:false |
+|dish     |references |null:false |
+|user     |references |null:false |
+
+.belongs_to user
+.has_many comment
+
+
+
