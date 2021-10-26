@@ -7,14 +7,14 @@
 
 
 # アプリケーション概要 
-難しい工程はいらず、すぐに実践しやすいレシピ。
+難しい工程はいらず、すぐに実践しやすいレシピ。  
 レシピの内容は３行で完結にすることで、やる気が出ないときでも頑張れる気持ちになれる
 アプリケーションです。
 
 # 制作背景
 病院食の献立作成時に、何か新しいメニューを取り入れたいと思い
-ふと、書店で「三行レシピ」という料理の本を見かけました。
-三行でわかりやすく調理工程がまとまっており、とてもわかりやすかったので購入しました。
+ふと、書店で「三行レシピ」という料理の本を見かけました。  
+三行でわかりやすく調理工程がまとまっており、とてもわかりやすかったので購入しました。  
 本の内容以外にも、ユーザー同士が3行で作れるものをたくさん共有してみるのも面白いと考え
 制作してみました。
 
@@ -24,19 +24,20 @@ https://cookreshipi.herokuapp.com/
 
 
 # テスト用アカウント	
-メールアドレス： test@test
-パスワード    :testtest
+メールアドレス： test@test  
+パスワード    :testtest  
 
 # 機能一覧
-ユーザー登録機能、ログイン機能
-画像アップロード機能
+ユーザー登録機能  
+ログイン機能  
+画像アップロード機能  
 
 
 
 # 利用方法	
-ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。
- ユーザー登録を行わなくても、レシピを閲覧することができます。
-ユーザーページで自分が投稿した内容を確認することができます。
+ログインしたユーザーのみ、コメントとレシピ投稿をすることができます。  
+ ユーザー登録を行わなくても、レシピを閲覧することができます。  
+ユーザーページで自分が投稿した内容を確認することができます。  
  ![dish_index](https://user-images.githubusercontent.com/88422268/138323704-082d8e3f-d875-4f7a-aebf-7385ce0f9ed8.jpg)
 <img width="692" alt="dish_new" src="https://user-images.githubusercontent.com/88422268/138323725-52c83149-9328-4c16-9433-409f241b5f2b.png">
 
@@ -65,8 +66,8 @@ MySQL
 |profile            |text     |null:false |
 
 Association
-.has_many  dish 
-.has_many comment
+.has_many  dish  
+.has_many comment  
 
 ## dish テーブル
 |column   |Type       |Options    |
@@ -80,8 +81,8 @@ Association
 |user     |references |null:false |
 
 Association
-.belongs_to user
-.has_many  comment
+.belongs_to user  
+.has_many  comment  
 
 ## commentテーブル
 |column   |Type       |Optiond    |
@@ -90,8 +91,8 @@ Association
 |dish     |references |null:false |
 |user     |references |null:false |
 
-.belongs_to user
-.has_many comment
+.belongs_to user  
+.has_many comment  
 
 
 
