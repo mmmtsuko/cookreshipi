@@ -5,10 +5,8 @@
         <%= link_to "ようこそ#{current_user.nickname}さん", user_path(current_user), class: :greeting__link%>
       </div>
     <% end %>
-      <%= render partial: 'dish', collection: @dishes %>
-    
     <div class="card__wrapper">
-    
+      <%= render partial: 'dish', collection: @dishes %>
     </div>
   </div>
 </main>
